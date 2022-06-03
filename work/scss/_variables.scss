@@ -1,0 +1,301 @@
+
+//------------------------- Mixins (Stor - +1020px)
+
+
+@mixin h-baggrund-styling {
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 10%;
+    margin-bottom: 4em;
+    box-shadow: 0px 10px 8px #dbdbdb;
+}
+
+@mixin titel-styling-stor {
+    margin: 1.5em auto 0em auto;
+    width: 960px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 1.4em;  
+}
+
+@mixin tagline-styling-stor {
+    margin: 1.5em auto 0em auto;
+    width: 960px;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+@mixin header-container-styling-stor {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em 0em 2em;
+}
+
+@mixin header-logo-styling {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 5px;
+    margin: 24px 0px 0px 0px;
+}
+
+@mixin hover-styling {
+    transition: 0.3s;
+    opacity: 0.6;
+    transform: scale(1.05);
+}
+
+
+@mixin navbar-styling-stor {
+    list-style: none;
+    display: inline-flex;
+    margin-top: 1.5em;
+}
+
+@mixin navbar-anchor-styling-stor {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 2em;
+    font-size: 16px; 
+}
+
+@mixin navbar-anchor-active-styling {
+    border-bottom: 1px solid white;
+    padding-bottom: 0.3em;
+}
+
+@mixin navbar-toggle-styling {
+    width: 100%;
+    display: none;
+    position: absolute;
+    background-color: rgba($color: #000000 , $alpha: 0.9);
+    transition: 3s;
+    top: 5.5em;
+    left: 0;
+}
+
+@mixin navbar-toggle-anchor-styling {
+    display: block;
+    margin: 1.5em 0;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 2em;
+    font-size: 16px;
+}
+
+@mixin dropdown-btn-styling {
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    margin-left: 2em;
+    text-transform: uppercase;
+    color: white;
+}
+
+@mixin dropdown-content-styling {
+    display: none;
+    position: absolute;
+    top: 64px;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    min-width: 160px;
+    z-index: 1;
+}
+
+@mixin dropdown-content-anchor-styling {
+    color: white;
+    padding: 14px 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    
+}
+
+@mixin sektion-styling-stor {
+    width: 960px;
+    margin: 2em auto;
+}
+
+@mixin sektion-container-styling-stor {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin tekst-boks-styling-stor {
+    width: 50%;
+    line-height: 1.5em;
+}
+
+@mixin ikon-boks-styling-stor {
+    width: 33%;
+    height: 20em;
+}
+
+@mixin h2-styling {
+    font-size: 20px;
+    margin-bottom: 1.5em;
+}
+
+@mixin eksempel-knap-styling {
+    border: none;
+    padding: 0 0;
+    background: none;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@mixin eksempel-boks-styling {
+    display: none;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to top, #000000, #06228f) 1;
+}
+
+@mixin kontakt-formular-styling-stor {
+    width: 98%;
+    margin-top: 10px;
+    padding: 1em 10px;
+    resize: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to top, #000000, #06228f) 1;
+}
+
+@mixin kontakt-formular-btn-styling {
+    padding: 1em 2em;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to top, #000000, #06228f) 1;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+//------------------------- Mixins (Mellem - 1020px)
+
+@mixin titel-styling-mellem {
+    font-size: 40px;
+    line-height: 1em;
+    width: 680px;
+    margin: 3em auto 0em auto;
+    line-height: 1.2em;
+}
+
+@mixin tagline-styling-mellem {
+    font-size: 18;
+    line-height: 1em;
+    width: 680px;
+    margin: 2em auto 0em auto;
+    line-height: 1.5em;
+}
+
+@mixin sektion-styling-mellem {
+    font-size: 14px;
+    line-height: 1.4em;
+    width: 680px;
+    margin: 4em auto;
+}
+
+//------------------------- Mixins (Lille - 780px)
+
+@mixin titel-styling-lille {
+    font-size: 40px;
+    line-height: 1em;
+    width: 620px;
+    margin: 3em auto 0em auto;
+    line-height: 1.3em;
+}
+
+@mixin tagline-styling-lille {
+    font-size: 18;
+    line-height: 1em;
+    width: 620px;
+    margin: 2em auto 0em auto;
+    line-height: 1.5em;
+}
+
+@mixin navbar-styling-lille {
+    list-style: block;
+    display: none;
+}
+
+@mixin burgermenu-styling {
+    display: inline;
+    position: absolute;
+    right: 40px;
+    margin-top: 1em;
+}
+
+@mixin sektion-styling-lile {
+    font-size: 12px;
+    width: 620px;
+}
+
+//------------------------- Mixins (Mindst - 660px)
+
+@mixin titel-styling-mindst {
+    font-size: 40px;
+    line-height: 1em;
+    width: 90%;
+    margin: 3em auto 0em auto;
+    line-height: 1.2em;
+}
+
+@mixin tagline-styling-mindst {
+    font-size: 18;
+    line-height: 1em;
+    width: 90%;
+    margin: 2em auto 0em auto;
+    line-height: 1.5em;
+}
+
+@mixin sektion-styling-mindst {
+    font-size: 12px;
+    width: 90%;
+    margin: 2em auto;    
+}
+
+ @mixin sektion-video-ikon-boks-styling-mindst {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+ }
+
+@mixin sektion-kontakt-styling-mindst {
+    width: 95%;
+    margin: 2em auto;
+}
+
+@mixin sociale-medier-styling-mindst {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+//------------------------- Variabler
+
+
+
+$non-hover: 0.3s; 
+
+$sektion-bredde-stor: 45%;
