@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techno | SQL-injektion</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="h-artikel-sql-injektion" loading="lazy">
+        <div class="header-container">
+            <div class="boks1">
+                <a href="index.html">
+                    <h1>Techno</h1>
+                </a>
+            </div>
+            <div class="boks2">
+                <a href="#" onclick="toggleFunktion()">
+                    <img src="images/ikon-burgermenu.png" alt="burgermenu" class="burgermenu">
+                </a>
+                <div class="navbar">
+                    <a href="index.html">Forside</a>
+                    <div class="dropdown">
+                        <a class="dropbtn" id="active">Artikler <img src="images/pil-ned-hvid.png" alt="pil-ned"></a>
+                        <div class="dropdown-content">
+                            <a href="artikel-phishing.html">Phishing</a>
+                            <a href="artikel-virus.html">Virus</a>
+                            <a href="artikel-ransomware.html">Ransomware</a>
+                            <a href="artikel-cross-site-scripting.html">Cross-site scripting</a>
+                            <a href="artikel-sql-injektion.html">SQL-injektion</a>
+                        </div>
+                    </div>
+
+                    <a href="kontakt.html">Kontakt</a></li>
+                </div>
+                <div class="navbar-toggle">
+                    <a href="index.html" class="active">Forside</a>
+                    <a href="artikel-phishing.html">Phishing</a>
+                    <a href="artikel-virus.html">Virus</a>
+                    <a href="artikel-ransomware.html">Ransomware</a>
+                    <a href="artikel-cross-site-scripting.html">Cross-site scripting</a>
+                    <a href="artikel-sql-injektion.html">SQL-injektion</a>
+                    <a href="kontakt.html">Kontakt</a></li>
+                </div>
+            </div>
+        </div>
+        <h1 class="titel">SQL-Injektion</h1>
+        <p class="tagline"> Overtrædelser i databaser</p>
+    </header>
+
+
+
+
+
+
+
+    <div class="sektion-artikel">
+        <div class="boks1">
+            <div class="container">
+                <div class="tekst-boks">
+                    <h2>DEFINITION</h2>
+                    <p>Mange websider bruger databaser til at lagre information omkring deres brugere og deres
+                        interaktion med siderne. Den mest populære sprog, som bruges til
+                        dette, er SQL, hvilket står for Structured Query Language. Desværre kan baserne blive udsat for
+                        dataovertrædelser gennem det vi kalder for SQL-injektion
+                        (forkortet til SQLi).
+                        <br> <br>
+                        Angriberen sprøjter skadelig kode ind på en server, så han kan ændre den tilhørende data. Som
+                        regel sker det gennem en applikation forbundet til serven.
+                        <br> <br>
+                        Hvis databasen ikke er beskyttet ordenligt, kan den uheldigvis eksekverer koden og give hackeren
+                        administrativ adgang til folks personlige oplysninger.
+                    </p>
+                </div>
+                <div class="video-boks">
+                    <video controls>
+                        <source src="video/sqli - animation.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="boks2">
+            <div class="container">
+                <div class="tekst-boks">
+                    <h2>LØSNING</h2>
+                    <p>Hackeren kan derefter slette brugernes tilhørende data eller ændre det efter hans eget ønske.
+                        Dette kan volde problemer for websidens administration,
+                        og mange virksomheder har fået et negativt omdømme på grund af dette. Virksomheder er påkrævet
+                        af loven til at beskytte din data, så en stærk database
+                        er et must.
+                        <br> <br>
+                        Der er mange måder en hacker kan lave et SQLi-angreb. Typisk gør de det gennem en formular som
+                        f.eks. et login-system og et søgefelt eller gennem et link.
+                        Hvis databasen er ikke rustet med validering og kan ikke checke om inputet er gyldigt, bliver
+                        systemet kompromitteret.
+                        <br> <br>
+                        For at undgå dette, kan man gøre brug af særlige parametre i ens kode, som tjekker om dataen
+                        befinder sig det rette sted. Man kan også foretage en
+                        sikkerhedscanning, som tester om systemet kan brydes gennem applikationerne.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="boks3" onclick="toggleFunktion2()">
+            <button>Se eksempel <img src="images/pil-ned.png" alt="pil-ned"></button>
+
+            <hr>
+        </div>
+        <div class="boks4">
+            <div class="billede-boks">
+                <img src="images/sqli-eksempel.png" alt="sqli-eksempel">
+            </div>
+            <div class="tekst-boks">
+                <p>
+                    Her er et eksempel på skadelig kode. Hackeren forsøger først at gætte sig frem til en persons
+                    brugernavn og adgangskode. Her skriver han brugernavnet
+                    "user@email.com". Hvis adgangskoden mislykkes, kan han prøve at smide et anførselstegn ind. Hvis
+                    systemet ikke kan tjekke om dette tegn er gyldigt, kan
+                    der opstå en fejl med applikationen.
+                    <br> <br>
+                    Hackeren kan derefter skrive "" OR 1=1--. Intet forhindrer hackeren i at indsætte forkert kode,
+                    og fordi 1=1 er altid sandt, bliver det accepteret. Så få hackeren adgang til vedkommendes
+                    oplysninger.
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="info">
+                <ul>
+                    <h4>Information</h4>
+                    <li>Personale</li>
+                    <li>Copyright</li>
+                    <li>Andet</li>
+                </ul>
+            </div>
+            <div class="sociale-medier">
+                <a href="https://www.facebook.com/groups/692603095159785" target="_blank"> <img
+                        src="images/Facebook_icon_(black).svg" alt="Facebook_icon" class="soMe-ikon"> </a>
+                <a href="https://twitter.com/Techno_Danmark" target="_blank"> <img src="images/twitter-round.svg"
+                        alt="twitter-round" class="soMe-ikon"> </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="nav-toggle-funktion.js"></script>
+    <script src="eks-toggle-funktion.js"></script>
+
+</body>
+
+</html>

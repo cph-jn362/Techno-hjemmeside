@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techno | Cross-site scripting</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="h-artikel-malware" loading="lazy">
+        <div class="header-container">
+            <div class="boks1">
+                <a href="index.html">
+                    <h1>Techno</h1>
+                </a>
+            </div>
+            <div class="boks2">
+                <a href="#" onclick="toggleFunktion()">
+                    <img src="images/ikon-burgermenu.png" alt="burgermenu" class="burgermenu">
+                </a>
+                <div class="navbar">
+                    <a href="index.html">Forside</a>
+                    <div class="dropdown">
+                        <a class="dropbtn" id="active">Artikler <img src="images/pil-ned-hvid.png" alt="pil-ned"></a>
+                        <div class="dropdown-content">
+                            <a href="artikel-phishing.html">Phishing</a>
+                            <a href="artikel-virus.html">Virus</a>
+                            <a href="artikel-ransomware.html">Ransomware</a>
+                            <a href="artikel-cross-site-scripting.html">Cross-site scripting</a>
+                            <a href="artikel-sql-injektion.html">SQL-injektion</a> </div>
+                    </div>
+
+                    <a href="kontakt.html">Kontakt</a></li>
+                </div>
+                <div class="navbar-toggle">
+                    <a href="index.html" class="active">Forside</a>
+                    <a href="artikel-phishing.html">Phishing</a>
+                    <a href="artikel-virus.html">Virus</a>
+                    <a href="artikel-ransomware.html">Ransomware</a>
+                    <a href="artikel-cross-site-scripting.html">Cross-site scripting</a>
+                    <a href="artikel-sql-injektion.html">SQL-injektion</a>
+                    <a href="kontakt.html">Kontakt</a></li>
+                </div>
+            </div>
+        </div>
+        <h1 class="titel">Cross-site Scripting</h1>
+        <p class="tagline"> Skadelig kode gennem applikationer</p>
+    </header>
+
+
+
+
+
+
+
+    <div class="sektion-artikel">
+        <div class="boks1">
+            <div class="container">
+                <div class="tekst-boks">
+                    <h2>DEFINITION</h2>
+                    <p>Cross-site scripting, også kaldt for XSS, er et cyberangreb som hackere bruger til at stjæle
+                        folks oplysninger gennem stykker af kode, som de smider ind på
+                        en hjemmeside.
+                        <br> <br>
+                        Så snart folk besøger siden, bliver koden eksekveret og sender deres cookies (tekstfiler om
+                        brugerne) til hackeren.
+                        <br> <br>
+                        På overfladen ligner det et SQLi-angreb (se artikel om SQL-injektion), men i stedet for en
+                        database går hackeren ud efter selve brugerne.
+                    </p>
+                </div>
+                <div class="video-boks">
+                    <video controls>
+                        <source src="#" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="boks2">
+            <div class="container">
+                <div class="tekst-boks">
+                    <h2>LØSNING</h2>
+                    <p>Hackere bruger oftest computersproget JavaScript til at udføre disse overtrædelser. Mange
+                        websider kræver også at du aktiver JavaScript, så det kan fungere. De skjuler koden så brugerne
+                        ikke opdager, hvad der er sket. Koden
+                        kan dog også bruges til at ændre html-siden (websidens struktur og indhold).
+                        <br> <br>
+                        Hjemmesider bliver udsat for XSS-angreb, fordi deres tilhørende applikationer er ikke beskyttet
+                        ordenligt. Den nemmeste måde man bekæmpe disse trusler er
+                        at bruge specielle parametre, som transformere kode om til normal tekst. På den måde kan et
+                        XSS-angreb ikke eksekveres.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="boks3" onclick="toggleFunktion2()">
+            <button>Se eksempel <img src="images/pil-ned.png" alt="pil-ned"></button>
+
+            <hr>
+        </div>
+        <div class="boks4">
+            <div class="billede-boks">
+                <img src="images/xss-eksempel.png" alt="xss-hacking">
+            </div>
+            <div class="tekst-boks">
+                <p>Her smideren hackeren JavaScript-kode inde i en søgeformular, i håb om at det vil blive ekseveret på
+                    siden af andre brugere. I dette tilfælde forsøger
+                    den kriminelle at give brugerne en alert-besked, med teksten "hacked". Hvis siden kan ikke validere
+                    koden, bliver det accepteret og hver gang folk besøger
+                    siden, popper beskeden op.
+                    <br> <br>
+                    Hvis han ønskede, kunne han gå ud efter cookies og modtage personlig info. For at bekæmpe denne
+                    trusel bør webudviklere 'escape'
+                    deres applikationer. Dvs. at i stedet for siden ser inputtet som kode, bliver det lavet om til
+                    normal tekst. På den måde kan koden ikke udføres.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="info">
+                <ul>
+                    <h4>Information</h4>
+                    <li>Personale</li>
+                    <li>Copyright</li>
+                    <li>Andet</li>
+                </ul>
+            </div>
+            <div class="sociale-medier">
+                <a href="https://www.facebook.com/groups/692603095159785" target="_blank"> <img
+                        src="images/Facebook_icon_(black).svg" alt="Facebook_icon" class="soMe-ikon"> </a>
+                <a href="https://twitter.com/Techno_Danmark" target="_blank"> <img src="images/twitter-round.svg"
+                        alt="twitter-round" class="soMe-ikon"> </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="nav-toggle-funktion.js"></script>
+    <script src="eks-toggle-funktion.js"></script>
+
+</body>
+
+</html>

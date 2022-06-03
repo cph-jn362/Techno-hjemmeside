@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techno | Kontakt</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="h-kontakt" loading="lazy">
+        <div class="header-container">
+            <div class="boks1">
+                <a href="index.html">
+                    <h1>Techno</h1>
+                </a>
+            </div>
+            <div class="boks2">
+                <a href="#" onclick="toggleFunktion()">
+                    <img src="images/ikon-burgermenu.png" alt="burgermenu" class="burgermenu">
+                </a>
+                <div class="navbar">
+                    <a href="index.html">Forside</a>
+                    <div class="dropdown">
+                        <a class="dropbtn">Artikler <img src="images/pil-ned-hvid.png" alt="pil-ned"></a>
+                        <div class="dropdown-content">
+                            <a href="artikel-phishing.html">Phishing</a>
+                            <a href="artikel-virus.html">Virus</a>
+                            <a href="artikel-ransomware.html">Ransomware</a>
+                            <a href="artikel-cross-site-scripting.html">Cross-site scripting</a>
+                            <a href="artikel-sql-injektion.html">SQL-injektion</a>
+                        </div>
+                    </div>
+
+                    <a href="kontakt.html" id="active">Kontakt</a></li>
+                </div>
+                <div class="navbar-toggle">
+                    <a href="index.html" class="active">Forside</a>
+                    <a href="artikel-phishing.html">Phishing</a>
+                    <a href="artikel-virus.html">Virus</a>
+                    <a href="artikel-ransomware.html">Ransomware</a>
+                    <a href="artikel-cross-site-scripting.html">Cross-site scripting</a>
+                    <a href="artikel-sql-injektion.html">SQL-injektion</a>
+                    <a href="kontakt.html">Kontakt</a></li>
+                </div>
+            </div>
+        </div>
+        <h1 class="titel">Kontakt</h1>
+        <p class="tagline"> Spørgmål omkring cybersikkerhed og IT-kriminalitet</p>
+    </header>
+
+
+
+
+
+
+
+    <div class="sektion-kontakt">
+        <div class="boks1">
+            <div class="container">
+                <div class="boks1">
+                    <p>Har du spørgsmål vedrørende cybersikkerhed eller andre relevante emner? Så skriv endelig en
+                        besked til os gennem formularen, og så skal vi nok prøve at skrive tilbage hurtigst muligt. </p>
+                    <hr>
+                    <form action="/action_page.php">
+                        <div>
+                            <input type="text" id="navn" name="navn" placeholder="Navn"><br>
+                        </div>
+                        <div>
+                            <input type="email" id="email" name="email" placeholder="Email"><br>
+                        </div>
+                        <div>
+                            <input type="text" id="emne" name="emne" placeholder="Emne"><br><br>
+                        </div>
+                        <div>
+                            <textarea name="kommentar" form="usrform" style="height:300px;"
+                                placeholder="Kommentar"></textarea><br><br>
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="info">
+                <ul>
+                    <h4>Information</h4>
+                    <li>Personale</li>
+                    <li>Copyright</li>
+                    <li>Andet</li>
+                </ul>
+            </div>
+            <div class="sociale-medier">
+                <a href="https://www.facebook.com/groups/692603095159785" target="_blank"> <img
+                        src="images/Facebook_icon_(black).svg" alt="Facebook_icon" class="soMe-ikon"> </a>
+                <a href="https://twitter.com/Techno_Danmark" target="_blank"> <img src="images/twitter-round.svg"
+                        alt="twitter-round" class="soMe-ikon"> </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="nav-toggle-funktion.js"></script>
+    <script src="eks-toggle-funktion.js"></script>
+
+</body>
+
+</html>
